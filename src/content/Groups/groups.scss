@@ -1,0 +1,126 @@
+.group{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+
+    .groupNav{
+        position: fixed;
+        left: 0;
+        width: 25%;
+        padding: 12px;
+        background-color: #242526;
+
+        .groupNavItems{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            .groupNavItem{
+                padding: 8px;
+                outline: none;
+                border: none;
+                display: flex;
+                background-color: transparent;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #565656;
+                }
+
+                &.active{
+                    background-color: #565656;
+                }
+
+                &.addGroup{
+                    background-color: #263951;
+                    text-align: center;
+                    margin-top: 12px;
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        color: #2d86fa;
+                    }
+                }
+
+                .btnIconImggroup{
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/-hTUiaI1wVL.png');
+                    background-position: 0px -46px; 
+                    background-size: 25px 258px;
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImggroupRequest{
+                    
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Jwlk9_rb3zt.png');
+                    background-position: 0px -42px; 
+                    background-size: 21px 471px;
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImggroupAdd{
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/2TdJnlxcVlJ.png"); 
+                    background-position: -136px -126px; 
+                    background-size: 189px 160px;
+                    width: 16px; 
+                    height: 16px; 
+                    background-repeat: no-repeat; 
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+            }
+        }
+    }
+
+    .groupContent{
+        margin-left: 25vw;
+        width: 75%;
+        padding: 32px;
+
+    }
+
+    .groupModal{
+        position: fixed;
+        z-index: -1;
+        background-color: #2b2b2b6f;
+        inset: 56px 0 0 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s;
+        opacity: 0;
+        &.activeNewGroup{
+            opacity: 1;
+            z-index: 1000;
+        }
+        .groupForm{
+
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                text-align: center;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.loginContainer{
+    background-color: #e3e4e4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .login{
+        margin: auto;
+        display: flex;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        width: 75vw;
+        .login__header{
+            padding-right: 12px;
+            width: 50%;
+            h1{
+                font-size: 60px;
+                letter-spacing: -2px;
+                color: #1877f2;
+                margin-bottom: 10px;
+
+            }
+            p{
+                color: #000;
+                font-size: 28px;
+            }
+        }
+        .login__box{
+            width: 50%;
+            padding-left: 12px;
+            .loginContent{
+                background-color: #fff;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+                padding: 20px 20px 28px;
+                display: flex;
+                flex-direction: column;
+
+                .loginHeader{
+                    color: #000;
+                    font-size: 24px;
+                    margin-bottom: 12px;
+                    font-weight: 600;
+                }
+
+                .login__box__input{
+                    font-size: 17px;
+                    outline: none;
+                    padding: 20px 16px;
+                    border: 1px solid #dddfe2;
+                    color: #1d2129;
+                    height: 22px;
+                    border-radius: 6px;
+                    margin-bottom: 12px;
+                    line-height: 16px;
+                    vertical-align: middle;
+                }
+
+                .loginBtn{
+                    background-color: #1877f2;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 20px;
+                    line-height: 48px;
+                    padding: 0 16px;
+                    cursor: pointer;
+                    color: #fff;
+                    font-weight: 600;
+                    margin-bottom: 12px;
+                    transition: .2s;
+
+                    &:hover{
+                        background-color: #166fe5;
+                    }
+                }
+
+                .registerBtn{
+                    background-color: #42b72a;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 20px;
+                    line-height: 48px;
+                    padding: 0 16px;
+                    cursor: pointer;
+                    color: #fff;
+                    font-weight: 600;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: .2s;
+
+                    &:hover{
+                        background-color: #36a420;
+                    }
+                }
+            }
+        }
+    
+    
+    
+    }
+}

@@ -1,0 +1,275 @@
+.searchPage{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+    .searchNav{
+        border-top: 1px solid #3a3a3a;
+        border-right: 1px solid #3a3a3a;
+        position: fixed;
+        left: 0;
+        width: 25%;
+        padding: 12px;
+        background-color: #242526;
+
+        .searchNavItems{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            h1{
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .searchNavItemsText{
+                color: #b0b3b8;
+                margin-bottom: 8px;
+            }
+
+            .line{
+                height: 1px;
+                width: 100%;
+                background-color: #3a3a3a;
+                margin: 8px 0;
+            }
+
+            .searchNavItemsTitle{
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            .searchNavItem{
+                padding: 8px;
+                outline: none;
+                border: none;
+                display: flex;
+                background-color: transparent;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #565656;
+                }
+
+                &.active{
+                    background-color: #565656;
+                }
+
+                &.addsearch{
+                    background-color: #263951;
+                    text-align: center;
+                    margin-top: 12px;
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        color: #2d86fa;
+                    }
+                }
+
+                .btnIconImgSearchAll{
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/RXO31aQw1eV.png"); 
+                    background-position: 0px -184px; 
+                    background-size: auto;
+                    width: 20px; 
+                    height: 20px; 
+                    background-repeat: no-repeat; 
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImgSearchFriend{
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/bV_gSW0raiG.png"); 
+                    background-position: -22px -200px; 
+                    background-size: 74px 360px; 
+                    width: 20px; 
+                    height: 20px; 
+                    background-repeat: no-repeat; 
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImgSearchGroup{
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/bV_gSW0raiG.png"); 
+                    background-position: 0px -222px; 
+                    background-size: 74px 360px; 
+                    width: 20px; 
+                    height: 20px; 
+                    background-repeat: no-repeat; 
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+            }
+        }
+    }
+
+    .searchContent{
+        margin-left: 25vw;
+        width: 75%;
+        padding: 32px;
+
+        .searchContentItem{
+            padding: 16px;
+            background-color: #242526;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+
+            h3{
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+
+            .searchContentItemGroup{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                .searchContentItemGroupBox{
+                    display: flex;
+                    align-items: center;
+
+                    .searchImg{
+                        .searchImgItem{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 8px;
+                            margin-right: 8px;
+                            transition: .1s;
+                            &:hover{
+                                opacity: .6;
+                            }
+                        }
+
+                    }
+
+                    .searchAuthor{
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    button{
+                        padding: 10px 12px;
+                        border-radius: 4px;
+                        background-color: #263951;
+                        color: #2c88ff;
+                        outline: none;
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: background-color .2s;
+
+                        &:hover{
+                            background-color: #40618a;
+                        }
+
+                        &.cancel{
+                            background-color: #484849;
+                            color: #fff;
+                            font-weight: 500;
+
+                            &:hover{
+                                background-color: #5f6061;
+                            }
+                        }
+                    }
+
+                    .adminButtonSearch{
+                        padding: 10px 12px;
+                        border-radius: 4px;
+                        background-color: #263951;
+                        color: #2c88ff;
+                        outline: none;
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: background-color .2s;
+                        text-decoration: none;
+
+                        &:hover{
+                            background-color: #40618a;
+                        }
+                    }
+
+                }
+
+            }
+
+            .searchContentItemFriend{
+                display: flex;
+                justify-content: space-between;
+            
+                .searchContentItemFriendBox{
+                    display: flex;
+                    align-items: center;
+            
+                    .searchImgFriend{
+                        .searchImgFriendItem{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            margin-right: 8px;
+                            transition: .1s;
+                            &:hover{
+                                opacity: .6;
+                            }
+                        }
+            
+                    }
+            
+                    .searchAuthor{
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+            
+                    button{
+                        padding: 10px 12px;
+                        border-radius: 4px;
+                        background-color: #263951;
+                        color: #2c88ff;
+                        outline: none;
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: background-color .2s;
+            
+                        &:hover{
+                            background-color: #40618a;
+                        }
+            
+                        &.cancel{
+                            background-color: #484849;
+                            color: #fff;
+                            font-weight: 500;
+            
+                            &:hover{
+                                background-color: #5f6061;
+                            }
+                        }
+                    }
+            
+                }
+            
+            }
+        }
+    }
+
+}

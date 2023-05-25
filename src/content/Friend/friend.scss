@@ -1,0 +1,88 @@
+.friend{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+
+    .friendNav{
+        position: fixed;
+        left: 0;
+        width: 25%;
+        padding: 12px;
+        background-color: #242526;
+
+        .friendNavItems{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            .friendNavItem{
+                padding: 8px;
+                outline: none;
+                border: none;
+                display: flex;
+                background-color: transparent;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #565656;
+                }
+
+                &.active{
+                    background-color: #565656;
+                }
+
+                .btnIconImgFriend{
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/2TdJnlxcVlJ.png');
+                    background-position: -21px -105px; 
+                    background-size: 189px 160px; 
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImgFriendRequest{
+                    
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Jwlk9_rb3zt.png');
+                    background-position: 0px -105px; 
+                    background-size: 21px 471px; 
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+                .btnIconImgFriendResponse{
+                    
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/6mVaf2IaH7B.png"); 
+                    background-position: 0px -105px; 
+                    background-size: auto; 
+                    width: 20px; 
+                    height: 20px; 
+                    background-repeat: no-repeat; 
+                    display: inline-block;
+                    -webkit-filter:  invert(89%) sepia(6%) hue-rotate(185deg);
+                }
+
+            }
+        }
+    }
+
+    .friendContent{
+        margin-left: 25vw;
+        width: 75%;
+        padding: 32px;
+
+    }
+}

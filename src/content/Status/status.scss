@@ -1,0 +1,388 @@
+.status{
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #242526;
+    margin-bottom: 20px;
+    .statusHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        .statusHeaderInfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .statusHeaderInfoAuthor{
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            .statusHeaderInfoTime{
+                font-size: 12px;
+                cursor: default;
+                user-select: none;
+                color: #a6a6a6;
+            }
+        }
+
+        .statusHeaderBtn{
+            position: relative;
+            .statusHeaderBtnAnimation{
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover{
+                    background-color: #3a3b3c;
+                }
+            }
+
+            .dropBox{
+                display: flex;
+                flex-direction: column;
+                background-color: #242526;
+                border-radius: 8px;
+                box-shadow: rgba(53, 53, 53, 0.826) 0px 5px 15px;
+                width: 20vw;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                padding: 8px;
+                button{
+                    border-radius: 4px;
+                    text-align: left;
+                    font-size: 14px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    padding: 8px;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    &:hover{
+                        background-color: #3a3b3c;
+                    }
+                }
+            }
+        }
+    }
+
+    .statusContent{
+        span{
+            word-break: break-word;
+            line-height: 24px;
+        }
+    }
+
+    .statusImg{
+        width: 100%;
+        .statusImgItem{
+            margin: 12px 0; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .statusCount{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .statusCountLike{
+            img{
+                margin-right: 4px;
+            }
+
+            span{
+                cursor: default;
+                user-select: none;
+            }
+
+            display: flex;
+            align-items: center;
+        }
+
+        .statusCountComment{
+            user-select: none;
+            cursor: default;
+        }
+    }
+
+    .statusIcon{
+        display: flex;
+        position: relative;
+        .statusIconItem{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            width: 50%;
+            border-radius: 4px;
+            transition: .2s;
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+                background-color: #5f5f5f55;
+            }
+
+            span{
+                margin-right: 8px;
+                .like{
+                    -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg) brightness(90%) contrast(96%);
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/yMbUy-Ma5oR.png"); background-position: 0px -247px; background-size: 25px 615px; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;
+                    &.clicked{
+                        background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/yMbUy-Ma5oR.png"); background-position: 0px -228px; background-size: 25px 615px; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;
+                        -webkit-filter:invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);
+                    }
+                }
+    
+                .comment{
+                    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/yMbUy-Ma5oR.png"); background-position: 0px -209px; background-size: 25px 615px; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;
+                    -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg) brightness(90%) contrast(96%);
+                }
+            }
+
+            .statusIconText{
+                &.clickedLike{
+                    color: #2d86ff;
+                }
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .statusComment{
+        width: 100%;
+        .statusCommentUser{
+            display: flex;
+            margin-top: 16px;
+
+            .statusCommentInput{
+                display: flex;
+                align-items: center;
+                padding: 4px 8px;
+                border-radius: 12px;
+                flex: 1;
+                background-color: #3a3b3c;
+                font-size: 14px;
+                .statusCommentInputItem{
+                    word-break: break-all;
+                    outline: none;
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .statusCommentItem{
+            padding-right: 30%;
+            display: flex;
+            margin-top: 16px;
+
+            &:hover .statusCommentText .statusCommentBtn{
+                visibility: visible;
+            }
+
+            .userLink{
+                text-decoration: none;
+                font-weight: 600;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            .statusCommentText{
+                margin-left: 2px;
+                padding: 8px;
+                border-radius: 12px;
+                flex: 1;
+                background-color: #3a3b3c;
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                word-break: break-all;
+                position: relative;
+                p{
+                    margin-top: 4px;
+                    line-height: 20px;
+                }
+
+                .statusCommentTextTime{
+                    font-size: 11px;
+                    padding: 4px 0 4px;
+                    user-select: none;
+                    cursor: default;
+                    color: #a3a3a3;
+                }
+
+                .commentTextarea{
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    resize: none;
+                }
+
+                .commentNote{
+                    font-size: 12px;
+                    color: #a0a0a0;
+                    text-align: right;
+                }
+
+                .statusCommentBtn{
+                    position: absolute;
+                    left: 100%;
+                    display: flex;
+
+                    visibility: hidden;
+                    margin: 0 8px 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    .statusCommentBtnStyle{
+                        border-radius: 50%;
+                        display: flex;
+                        padding: 8px;
+                        &:hover{
+                            background-color: #5f5f5f55;
+                        }
+                    }
+
+                    
+
+                    .dropBoxComment{
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #242526;
+                        border-radius: 8px;
+                        box-shadow: rgba(53, 53, 53, 0.826) 0px 5px 15px;
+                        width: 10vw;
+                        z-index: 200;
+                        top: 100%;
+                        left: 0;
+                        padding: 8px;
+                        button{
+                            border-radius: 4px;
+                            text-align: left;
+                            font-size: 14px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            padding: 8px;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            &:hover{
+                                background-color: #3a3b3c;
+                            }
+                        }
+                    }
+
+
+                    
+                }
+            }
+        }
+
+        .statusCommentBtn{
+            width: max-content;
+            margin-top: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    
+}
+
+.modalEditStatus{
+    position: fixed;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    inset: 0 0 0 0;
+    background-color: rgba(0,0,0,.4);
+    .StatusEditContentStt{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    
+        .StatusEditStt{
+            padding: 16px;
+            border-radius: 12px;
+            background-color: #242526;
+            margin-bottom: 20px;
+            .StatusEditSttHeader{
+                display: flex;
+                margin: 12px 0;
+                .StatusEditSttInput{
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 8px;
+                    border-radius: 12px;
+                    flex: 1;
+                    background-color: #3a3b3c;
+                    font-size: 16px;
+                    .StatusEditSttInputItem{
+                        word-break: break-all;
+                        outline: none;
+                        width: 100%;
+                        font-size: 16px ;
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+    
+            .StatusEditSttImg{
+                display: flex;
+                align-items: center;
+                label{
+                    outline: none;
+                    padding: 8px 16px;
+                    background-color: #3a3b3c;
+                    cursor: pointer;
+                    user-select: none;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 4px;
+                    margin-bottom: 12px;
+                    input[type='file']{
+                        display: none;
+                    }
+                }
+    
+            }
+    
+            .StatusEditSttBtn{
+                float: right;
+                padding: 8px 14px;
+                margin-right: 8px;
+                background-color: #2d86ff;
+                font-size: 16px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: .2s;
+                outline: none;
+                border: none;
+
+            }
+        }
+    }
+
+}

@@ -1,0 +1,230 @@
+.header{
+    height: 56px;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    padding: 0 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #242526;
+    align-items: center;
+    justify-content: space-between;
+    .headerContent1{
+        display: flex;
+        align-items: center;
+        .logoBtn{
+            margin-right: 12px;
+        }
+
+        .search{
+            height: 40px;
+            position: relative;
+            background-color: #3a3b3c;
+            border-radius: 26px;
+            min-width: 18vw;
+            .searchInput{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                padding-left: 30px;
+                font-size: 14px;
+                height: 40px;
+                color: #a9abb1;
+            }
+
+            .searchIcon{
+                position: absolute;
+                top: 52%;
+                left: 10px;
+                transform: translateY(-50%);
+                color: #a9abb1;
+            }
+
+        }
+    }
+
+    .headerContent2{
+        display: flex;
+        position: relative;
+        .headerFriendBtn{
+            text-decoration: none;
+        }
+
+        button,img{
+            border: none;
+            cursor: pointer;
+        }
+
+        .userInfo{
+            background-color: #242526;
+            padding: 16px 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            max-height: 80vh;
+            width: 30vw;
+            z-index: 800;
+            flex-direction: column;
+            .userInfo::-webkit-scrollbar{
+                display: none;
+            }
+
+            .user{
+                display: flex;
+                margin-top: 12px;
+                flex-direction: column;
+                .userItem{
+                    padding: 8px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #313131;
+                    }
+
+                    .userItemImg{
+                        &.icon{
+                            -webkit-filter: invert(89%) sepia(6%) hue-rotate(185deg);
+                        }
+                        background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yh/r/A8GfNKVFXzv.png"); 
+                        background-position: 0px -755px; 
+                        background-size: 25px 1488px;
+                        width: 20px; 
+                        height: 20px; 
+                        background-repeat: no-repeat; 
+                        display: inline-block;
+                    }
+                    p{
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+
+        .notification{
+            background-color: #242526;
+            padding: 16px 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            max-height: 80vh;
+            width: 30vw;
+            z-index: 800;
+            flex-direction: column;
+            .notification::-webkit-scrollbar{
+                display: none;
+            }
+            h2{
+                cursor:default;
+                user-select: none;
+                font-size: 22px;
+                padding: 0 8px
+
+            }
+
+            .notifications{
+                display: flex;
+                margin-top: 12px;
+                flex-direction: column;
+                overflow-y: auto;
+                .notificationsItem{
+                    padding: 8px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    .notificationsItemImg{
+                        border-radius: 50%;
+                        height: 56px;
+                        margin-right: 12px;
+                        font-weight: 600;
+                        width: 56px;
+                    }
+                    &:hover{
+                        background-color: #393a3b;
+                    }
+                }
+            }
+        }
+
+        .messenger{
+            background-color: #242526;
+            padding: 16px 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            max-height: 80vh;
+            width: 30vw;
+            z-index: 800;
+            flex-direction: column;
+            .notification::-webkit-scrollbar{
+                display: none;
+            }
+            h2{
+                cursor:default;
+                user-select: none;
+                font-size: 22px;
+                padding: 0 8px
+
+            }
+
+            .messengers{
+                display: flex;
+                margin-top: 12px;
+                flex-direction: column;
+                max-height: 60vh;
+                overflow: auto;
+                .messengersItem{
+                    padding: 8px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    border-radius: 8px;
+                    cursor: pointer;
+
+                    .messengerItemImg{
+                        .messengersItemImg{
+                            border-radius: 50%;
+                            height: 56px;
+                            font-weight: 600;
+                            width: 56px;
+                        }
+                    }
+                    &:hover{
+                        background-color: #393a3b;
+                    }
+
+                    .messengerItemText{
+                        margin-left: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        .messengerItemNameClient{
+                            margin-bottom: 8px;
+                        }
+
+                        .messengerItemInfo{
+                            font-size: 14px;
+                            color: #9f9c9c;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 1;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

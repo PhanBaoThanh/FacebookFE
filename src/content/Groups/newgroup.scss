@@ -1,0 +1,78 @@
+.newGroup{
+    background-color: #242526;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .newGroupContent{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .newGroupContentInput{
+            appearance: none;
+            outline: none;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #3e4042;
+            border-radius: 4px;
+            background-color: transparent;
+            outline: none;
+            margin-bottom: 12px;
+            transition: .1s;
+
+            &:hover{
+                border-color: #5e6062;
+            }
+
+
+            
+            .newGroupContentInputIcon{
+                background-color: #242526;
+            }
+        }
+        .newGroupBtnImg{
+            display: flex;
+            align-items: center;
+            label{
+                outline: none;
+                padding: 8px 16px;
+                background-color: #3a3b3c;
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                margin-bottom: 12px;
+                .newGroupBtnImgFile{
+                    display: none;
+                }
+            }
+
+        }
+
+        .newGroupContentBtn{
+            padding: 8px;
+            background-color: #2d86ff;
+            color: #fff;
+            user-select: none;
+            text-align: center;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: .2s;
+            font-size: 16px;
+            &:hover{
+                background-color: #5f8ac5;
+            }
+        }
+    }
+}
